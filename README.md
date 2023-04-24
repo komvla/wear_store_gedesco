@@ -1,0 +1,1 @@
+# wear_store_gedesco
