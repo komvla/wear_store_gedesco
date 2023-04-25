@@ -10,8 +10,8 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
-      '@': path.resolve(__dirname, 'src')
-    }
+      '@': path.resolve(__dirname, 'src'),
+    },
   },
   module: {
     rules: [
@@ -21,17 +21,13 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [ '@babel/preset-react','@babel/preset-typescript']
-          }
+            presets: ['@babel/preset-react', '@babel/preset-typescript'],
+          },
         },
       },
       {
         test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
@@ -41,6 +37,6 @@ module.exports = {
     }),
   ],
   devServer: {
-    port: 8080
-  } 
+    port: 8080,
+  },
 };
